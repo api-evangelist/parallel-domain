@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://parallel-domain.github.io/pd-sdk/
+notes: >-
+  Parallel Domain publishes a first-party Python SDK (module `paralleldomain`,
+  repo pd-sdk) that drives Data Lab synthetic-data generation and PD Sim/Replica.
+  It is distributed via a git install (installed straight from the GitHub repo),
+  not published on PyPI as of this pass. No first-party JS/Java/Go/Ruby/.NET
+  client libraries were found on npm, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, or crates.io.
+packages:
+- language: python
+  registry: github
+  name: paralleldomain
+  repo: https://github.com/parallel-domain/pd-sdk
+  docs: https://parallel-domain.github.io/pd-sdk/
+  install: pip install "paralleldomain @ git+https://github.com/parallel-domain/pd-sdk.git@main#egg=paralleldomain"
+  extras: [data_lab, visualization, dev]
+  python_requires: ">=3.8,<3.12"
+  official: true
+  on_pypi: false

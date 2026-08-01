@@ -1,0 +1,32 @@
+# Parallel Domain
+
+> Parallel Domain is a synthetic-data and sensor-simulation platform for physical-AI and autonomy developers. It turns real-world drive/flight logs into photorealistic, simulation-ready digital replicas and generates deterministic camera, lidar, and radar sensor data at scale for training, testing, and regulatory validation of perception systems. Access is through a first-party Python SDK (`paralleldomain` / pd-sdk) and an app console; there is no public REST/OpenAPI surface.
+
+## Products
+- [PD Replica](https://paralleldomain.com/product/pd-replica): Photorealistic neural reconstruction of drive/flight logs (camera, lidar, GPS) into simulation assets — world physics, HD maps, scene segmentation, dynamic agent reconstruction.
+- [PD Sim](https://paralleldomain.com/product/pd-sim): Deterministic camera/lidar/radar sensor simulation and test-scenario configuration/execution, with variation in lighting, traffic, and trajectories.
+- [Data Lab](https://paralleldomain.com/product): Self-serve synthetic-data generation driven through the Python SDK, including the Reactor generative-AI module.
+
+## SDK & Docs
+- [Parallel Domain Python SDK (pd-sdk) docs](https://parallel-domain.github.io/pd-sdk/): API reference for the `paralleldomain` module and `data_lab` (behaviors, generators, config, sensor rigs).
+- [Getting Started](https://parallel-domain.github.io/pd-sdk/getting_started.html): Install via `pip install "paralleldomain @ git+https://github.com/parallel-domain/pd-sdk.git@main#egg=paralleldomain"`.
+- [GitHub organization](https://github.com/parallel-domain): Official Parallel Domain org.
+
+## Auth
+- SDK authenticates to the Data Lab / Step backend with an org-scoped API key + credentials file via environment variables (`PD_CLIENT_STEP_API_KEY_ENV`, `PD_CLIENT_ORG_ENV`, `PD_CLIENT_CREDENTIALS_PATH_ENV`).
+- [App console / Login](https://app.paralleldomain.com/auth/login)
+
+## Company
+- [Website](https://paralleldomain.com)
+- [Resources / Blog](https://paralleldomain.com/resources)
+- [FAQ](https://paralleldomain.com/faq)
+- [Contact](https://paralleldomain.com/contact-us)
+- [Request a demo](https://paralleldomain.com/demo)
+- [Terms of Use](https://paralleldomain.com/terms-of-use)
+- [Privacy Policy](https://paralleldomain.com/privacy-policy)
+
+## Repo artifacts (API Evangelist)
+- packages/parallel-domain-packages.yml — first-party Python SDK
+- authentication/parallel-domain-authentication.yml — SDK auth profile
+- security/parallel-domain-domain-security.yml — TLS/HSTS/SPF/DMARC probe
+- well-known/parallel-domain-well-known.yml — /.well-known/ probe index

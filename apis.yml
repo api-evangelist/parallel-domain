@@ -1,8 +1,28 @@
 aid: parallel-domain
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/parallel-domain.png
 name: Parallel Domain
-description: 'Parallel Domain is a company surfaced as a portfolio company of foundry-group and added
-  to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Parallel Domain is a synthetic-data and sensor-simulation platform for
+  physical-AI and autonomy developers. It turns real-world drive and flight logs
+  into photorealistic, simulation-ready digital replicas (PD Replica) and
+  generates deterministic camera, lidar, and radar sensor data at scale (PD Sim),
+  plus self-serve synthetic-data generation through its Data Lab service. The
+  platform is driven through a first-party Python SDK (paralleldomain / pd-sdk)
+  and an app console, integrating with existing autonomy stacks and CI/CD for
+  training, testing, and regulatory validation of perception systems across
+  automotive, trucking, drone, robotics, agriculture, and defense.
 url: https://raw.githubusercontent.com/api-evangelist/parallel-domain/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +32,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Ai
+- Synthetic Data
+- Simulation
+- Autonomous Vehicles
+- Computer Vision
+- Machine Learning
+- Robotics
+- SDK
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,42 @@ maintainers:
 common:
 - type: Website
   url: https://paralleldomain.com
+- type: DeveloperPortal
+  url: https://parallel-domain.github.io/pd-sdk/
+- type: Documentation
+  url: https://parallel-domain.github.io/pd-sdk/
+- type: APIReference
+  url: https://parallel-domain.github.io/pd-sdk/paralleldomain/__index.html
+- type: GettingStarted
+  url: https://parallel-domain.github.io/pd-sdk/getting_started.html
+- type: GitHubOrganization
+  url: https://github.com/parallel-domain
+- type: Blog
+  url: https://paralleldomain.com/resources
+- type: Support
+  url: https://paralleldomain.com/faq
+- type: SignUp
+  url: https://app.paralleldomain.com/auth/login
+- type: Login
+  url: https://app.paralleldomain.com/auth/login
+- type: TermsOfService
+  url: https://paralleldomain.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://paralleldomain.com/privacy-policy
+- type: Packages
+  url: packages/parallel-domain-packages.yml
+- type: SDKs
+  url: packages/parallel-domain-packages.yml
+- type: Authentication
+  url: authentication/parallel-domain-authentication.yml
+- type: WellKnown
+  url: well-known/parallel-domain-well-known.yml
+- type: DomainSecurity
+  url: security/parallel-domain-domain-security.yml
+- type: LLMsTxt
+  url: llms/parallel-domain-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

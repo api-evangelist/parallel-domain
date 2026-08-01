@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://parallel-domain.github.io/pd-sdk/
+docs: https://parallel-domain.github.io/pd-sdk/
+notes: >-
+  Parallel Domain has no public REST/OpenAPI surface; access is through the
+  first-party Python SDK (paralleldomain / pd-sdk) and the app console at
+  app.paralleldomain.com. The SDK authenticates to the Data Lab / Step
+  generation backend with an organization-scoped API key plus a credentials
+  file, configured through environment variables. Auth model derived from the
+  SDK getting-started docs, not from a machine-readable spec.
+summary:
+  types: [apiKey]
+  api_key_in: [environment]
+  oauth2_flows: []
+schemes:
+- name: StepApiKey
+  type: apiKey
+  in: environment
+  env: PD_CLIENT_STEP_API_KEY_ENV
+  description: Organization Step API key used by the SDK to authenticate Data Lab generation requests.
+  sources: [https://parallel-domain.github.io/pd-sdk/]
+- name: ClientOrg
+  type: apiKey
+  in: environment
+  env: PD_CLIENT_ORG_ENV
+  description: Organization identifier scoping requests to the caller's Parallel Domain org.
+  sources: [https://parallel-domain.github.io/pd-sdk/]
+- name: ClientCredentialsFile
+  type: apiKey
+  in: environment
+  env: PD_CLIENT_CREDENTIALS_PATH_ENV
+  description: Path to a client credentials file consumed by the SDK.
+  sources: [https://parallel-domain.github.io/pd-sdk/]
+console: https://app.paralleldomain.com/auth/login
