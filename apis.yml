@@ -51,8 +51,8 @@ tags:
 - Synthetic Data
 - Simulation
 - Autonomous Vehicles
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Robotics
 - SDK
 tags_raw:
@@ -65,6 +65,8 @@ tags_raw:
 - Machine Learning
 - Robotics
 - SDK
+- Computer-Vision
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
