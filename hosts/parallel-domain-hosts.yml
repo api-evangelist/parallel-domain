@@ -1,0 +1,113 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 5
+  other_domain: 0
+  platform: 2
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - source
+  - status
+  - website
+hosts:
+- host: api.paralleldomain.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: paralleldomain.com
+  role: api
+  relation: own
+- host: app.paralleldomain.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  - Login
+  serves: []
+  registrable_domain: paralleldomain.com
+  role: identity
+  relation: own
+- host: dev.app.paralleldomain.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  title: Login | Parallel Domain
+  status: 200
+  registrable_domain: paralleldomain.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: parallel-domain.github.io
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  serves:
+  - cdn
+  - hosting
+  vendor: fastly
+  registrable_domain: github.io
+  role: portal
+  relation: platform
+- host: paralleldomain.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Blog
+  - Support
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - hosting
+  vendor: netlify
+  registrable_domain: paralleldomain.com
+  role: website
+  relation: own
+- host: status.paralleldomain.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: paralleldomain.com
+  role: status
+  relation: own

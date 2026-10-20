@@ -25,26 +25,23 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/parallel-domain.png
 name: Parallel Domain
-description: >-
-  Parallel Domain is a synthetic-data and sensor-simulation platform for
-  physical-AI and autonomy developers. It turns real-world drive and flight logs
-  into photorealistic, simulation-ready digital replicas (PD Replica) and
-  generates deterministic camera, lidar, and radar sensor data at scale (PD Sim),
-  plus self-serve synthetic-data generation through its Data Lab service. The
-  platform is driven through a first-party Python SDK (paralleldomain / pd-sdk)
-  and an app console, integrating with existing autonomy stacks and CI/CD for
-  training, testing, and regulatory validation of perception systems across
+description: Parallel Domain is a synthetic-data and sensor-simulation platform for physical-AI and autonomy
+  developers. It turns real-world drive and flight logs into photorealistic, simulation-ready digital
+  replicas (PD Replica) and generates deterministic camera, lidar, and radar sensor data at scale (PD
+  Sim), plus self-serve synthetic-data generation through its Data Lab service. The platform is driven
+  through a first-party Python SDK (paralleldomain / pd-sdk) and an app console, integrating with existing
+  autonomy stacks and CI/CD for training, testing, and regulatory validation of perception systems across
   automotive, trucking, drone, robotics, agriculture, and defense.
 url: https://raw.githubusercontent.com/api-evangelist/parallel-domain/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - foundry-group
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (local-v5; was portfolio-lead)
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-10-20'
 tags:
 - Company
 - Artificial Intelligence
@@ -67,13 +64,18 @@ tags_raw:
 - SDK
 - Computer-Vision
 - Machine-Learning
-apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Hosts
+  url: hosts/parallel-domain-hosts.yml
+- type: Vendors
+  url: vendors/parallel-domain-vendors.yml
+- type: StatusPage
+  url: https://status.paralleldomain.com/
 - type: Website
   url: https://paralleldomain.com
 - type: DeveloperPortal
@@ -108,10 +110,23 @@ common:
   url: well-known/parallel-domain-well-known.yml
 - type: DomainSecurity
   url: security/parallel-domain-domain-security.yml
-- type: LLMsTxt
-  url: llms/parallel-domain-llms.txt
+apis: []
 x-enrichment:
-  date: '2026-07-20'
-  status: enriched
-  artifacts_added: 5
-  pass: local-v1
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v5
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Parallel Domain exposes its platform only through a Python SDK whose hosted docs (v1.0.4) remain
+    live while the pd-sdk source repo now 404s, and no OpenAPI, GraphQL or MCP contract is served on paralleldomain.com,
+    app.paralleldomain.com or status.paralleldomain.com.
+  evidence:
+  - url: https://parallel-domain.github.io/pd-sdk/
+    status: 200
+  - url: https://github.com/parallel-domain/pd-sdk
+    status: 404
+  - url: https://paralleldomain.com/llms.txt
+    status: 404
+  checked: '2026-10-20'

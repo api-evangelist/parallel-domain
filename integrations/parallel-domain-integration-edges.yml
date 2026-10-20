@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/parallel-domain/integrations
+- https://n8n.io/integrations/parallel-domain/
+- https://composio.dev/toolkits/parallel-domain
+- https://monid.ai/tools/parallel-domain
+checked:
+- https://composio.dev/toolkits/parallel-domain
+- https://monid.ai/tools/parallel-domain
+- https://n8n.io/integrations/parallel-domain/
+- https://zapier.com/apps/parallel-domain/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
